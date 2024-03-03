@@ -23,7 +23,7 @@ main() {
   print("Area: ${triangle.area()}");
   print("Triangulo ${triangle.getType()}");
   print("\n\n");
-
+  var listOfFigures = [circle, rectangle, square, triangle];
   print(
-      "Area total dos objetos: ${circle.area() + rectangle.area() + square.area() + triangle.area()}");
+      "Area total dos objetos: ${listOfFigures.map((e) => e.area()).reduce((value, element) => value + element)}");
 }
